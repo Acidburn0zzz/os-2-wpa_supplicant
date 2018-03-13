@@ -4,10 +4,13 @@ BetaTester installation intructions
 	When using xwlan widget wpa_supplicant is usually found in
 	\util\xworkplace\plugins\xcenter\xwlan\.
 	When using the standalone wlanstat then in .\xwlan\.
-- check if the new version is used
+- check if the new version is used by xwlan/wlanstat
 	right-click - properties - tab 'WPA supplicant' check version and path
 - connect to wpa protected networks and post your findings at correspondending
 	thread at os2world.com
+- you can also test wpa_supplicant with a .conf file. F.i. set up a profile
+	with no security, switch on wireless and start wpa_supplicant manually
+	(f.i. wpa_supplicant.exe -i lan1 -cwpa_supplicant.conf)
 ###############################################################################
 wpa_supplicant package for xwlan/wlanstat
 ------------------------------------------------------------------------------
@@ -15,7 +18,8 @@ Author:          Jouni Malinen and contributors
                  Ported to OS/2 - eCS by Paul Smedley & Andreas Buchinger
 Last update:     20180310
 Current status:  v2.7 (OS/2-v2beta)
-Home page:       http://trac.netlabs.org/ports/browser/wpa_supplicant
+Home page:       https://bitbucket.org/Andi_B/os-2-wpa_supplicant/
+								 (http://trac.netlabs.org/ports/browser/wpa_supplicant/)
 
 wpa_supplicant was ported to OS/2 for use with xwlan/wlanstat. First port was
 made by Willibald Meyer. Maybe together with Christian Langanke the original
