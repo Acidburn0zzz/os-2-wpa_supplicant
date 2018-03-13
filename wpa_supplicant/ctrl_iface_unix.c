@@ -133,7 +133,7 @@ static void wpa_supplicant_ctrl_iface_receive(int sock, void *eloop_ctx,
 	struct ctrl_iface_priv *priv = sock_ctx;
 	char buf[4096];
 	int res;
-	struct sockaddr_storage from;
+  struct sockaddr_storage from;
 	socklen_t fromlen = sizeof(from);
 	char *reply = NULL, *reply_buf = NULL;
 	size_t reply_len = 0;
@@ -194,11 +194,11 @@ static void wpa_supplicant_ctrl_iface_receive(int sock, void *eloop_ctx,
 				     reply_len);
 		if (sendto(sock, reply, reply_len, 0, (struct sockaddr *) &from,
 			   fromlen) < 0) {
-			int _errno = errno;
+			int _errnoAB = errno;
 			wpa_dbg(wpa_s, MSG_DEBUG,
 				"ctrl_iface sendto failed: %d - %s",
-				_errno, strerror(_errno));
-			if (_errno == ENOBUFS || _errno == EAGAIN) {
+				_errnoAB, strerror(_errnoAB));
+			if (_errnoAB == ENOBUFS || _errnoAB == EAGAIN) {
 				/*
 				 * The socket send buffer could be full. This
 				 * may happen if client programs are not
@@ -926,7 +926,7 @@ static void wpa_supplicant_ctrl_iface_send(struct wpa_supplicant *wpa_s,
 	msg.msg_iovlen = idx;
 
 	dl_list_for_each_safe(dst, next, ctrl_dst, struct wpa_ctrl_dst, list) {
-		int _errno;
+		int _errnoAB;
 		char txt[200];
 
 		if (level < dst->debug_level)
@@ -943,20 +943,20 @@ static void wpa_supplicant_ctrl_iface_send(struct wpa_supplicant *wpa_s,
 			continue;
 		}
 
-		_errno = errno;
+		_errnoAB = errno;
 		os_snprintf(txt, sizeof(txt), "CTRL_IFACE monitor: %d (%s) for",
-			    _errno, strerror(_errno));
+			    _errnoAB, strerror(_errnoAB));
 		sockaddr_print(MSG_DEBUG, txt, &dst->addr, dst->addrlen);
 		dst->errors++;
 
-		if (dst->errors > 10 || _errno == ENOENT || _errno == EPERM) {
+		if (dst->errors > 10 || _errnoAB == ENOENT || _errnoAB == EPERM) {
 			sockaddr_print(MSG_INFO, "CTRL_IFACE: Detach monitor that cannot receive messages:",
 				       &dst->addr, dst->addrlen);
 			wpa_supplicant_ctrl_iface_detach(ctrl_dst, &dst->addr,
 							 dst->addrlen);
 		}
 
-		if (_errno == ENOBUFS || _errno == EAGAIN) {
+		if (_errnoAB == ENOBUFS || _errnoAB == EAGAIN) {
 			/*
 			 * The socket send buffer could be full. This may happen
 			 * if client programs are not receiving their pending
@@ -985,7 +985,7 @@ void wpa_supplicant_ctrl_iface_wait(struct ctrl_iface_priv *priv)
 {
 	char buf[256];
 	int res;
-	struct sockaddr_storage from;
+  struct sockaddr_storage from;
 	socklen_t fromlen = sizeof(from);
 
 	if (priv->sock == -1)
@@ -1048,7 +1048,7 @@ static void wpa_supplicant_global_ctrl_iface_receive(int sock, void *eloop_ctx,
 	struct ctrl_iface_global_priv *priv = sock_ctx;
 	char buf[4096];
 	int res;
-	struct sockaddr_storage from;
+  struct sockaddr_storage from;
 	socklen_t fromlen = sizeof(from);
 	char *reply = NULL, *reply_buf = NULL;
 	size_t reply_len;

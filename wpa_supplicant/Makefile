@@ -51,12 +51,12 @@ BINALL += wpa_passphrase
 endif
 
 ALL = $(BINALL)
-ALL += systemd/wpa_supplicant.service
-ALL += systemd/wpa_supplicant@.service
-ALL += systemd/wpa_supplicant-nl80211@.service
-ALL += systemd/wpa_supplicant-wired@.service
-ALL += dbus/fi.epitest.hostap.WPASupplicant.service
-ALL += dbus/fi.w1.wpa_supplicant1.service
+#ALL += systemd/wpa_supplicant.service
+#ALL += systemd/wpa_supplicant@.service
+#ALL += systemd/wpa_supplicant-nl80211@.service
+#ALL += systemd/wpa_supplicant-wired@.service
+#ALL += dbus/fi.epitest.hostap.WPASupplicant.service
+#ALL += dbus/fi.w1.wpa_supplicant1.service
 ifdef CONFIG_BUILD_WPA_CLIENT_SO
 ALL += libwpa_client.so
 endif
@@ -157,12 +157,14 @@ OBJS += ../src/utils/$(CONFIG_ELOOP).o
 OBJS_c += ../src/utils/$(CONFIG_ELOOP).o
 
 ifndef CONFIG_OSX
+ifndef CONFIG_OS2
 ifeq ($(CONFIG_ELOOP), eloop)
 # Using glibc < 2.17 requires -lrt for clock_gettime()
 # OS X has an alternate implementation
 LIBS += -lrt
 LIBS_c += -lrt
 LIBS_p += -lrt
+endif
 endif
 endif
 
@@ -1794,6 +1796,11 @@ OBJS += $(OBJS_d) ../src/drivers/drivers.o
 OBJS += $(OBJS_l2)
 endif
 
+ifdef CONFIG_DRIVER_GENMAC
+#OBJS += ../src/drivers/driver_genmac.o
+#OBJS += ../src/drivers/packet32.o
+endif
+
 ifdef CONFIG_NDIS_EVENTS_INTEGRATED
 CFLAGS += -DCONFIG_NDIS_EVENTS_INTEGRATED
 OBJS += ../src/drivers/ndis_events.o
@@ -1856,7 +1863,12 @@ wpa_priv: $(BCHECK) $(OBJS_priv)
 $(OBJS_c) $(OBJS_t) $(OBJS_t2) $(OBJS) $(BCHECK) $(EXTRA_progs): .config
 
 wpa_supplicant: $(BCHECK) $(OBJS) $(EXTRA_progs)
-	$(Q)$(LDO) $(LDFLAGS) -o wpa_supplicant $(OBJS) $(LIBS) $(EXTRALIBS)
+	$(QUIET)cmd /c bldlvl.cmd
+	@$(E) "  OBJS " $(OBJS)
+	@$(E) "  LIBS " $(LIBS)
+	@$(E) "  EXTRALIBS " $(EXTRALIBS)
+#	$(Q)$(LDO) $(LDFLAGS) -o wpa_supplicant $(OBJS) $(LIBS) $(EXTRALIBS) bldlvl.def
+	$(LDO) $(LDFLAGS) -o wpa_supplicant $(OBJS) $(LIBS) $(EXTRALIBS) bldlvl.def
 	@$(E) "  LD " $@
 
 eapol_test: $(OBJS_t)
@@ -1868,11 +1880,11 @@ preauth_test: $(OBJS_t2)
 	@$(E) "  LD " $@
 
 wpa_passphrase: $(OBJS_p)
-	$(Q)$(LDO) $(LDFLAGS) -o wpa_passphrase $(OBJS_p) $(LIBS_p) $(LIBS)
+	$(Q)$(LDO) $(LDFLAGS) -o wpa_passphrase $(OBJS_p) $(LIBS_p) $(LIBS) bldlvl.def
 	@$(E) "  LD " $@
 
 wpa_cli: $(OBJS_c)
-	$(Q)$(LDO) $(LDFLAGS) -o wpa_cli $(OBJS_c) $(LIBS_c)
+	$(Q)$(LDO) $(LDFLAGS) -o wpa_cli $(OBJS_c) $(LIBS_c) bldlvl.def
 	@$(E) "  LD " $@
 
 LIBCTRL += ../src/common/wpa_ctrl.o

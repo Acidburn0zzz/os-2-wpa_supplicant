@@ -149,6 +149,7 @@ char * os_rel2abs_path(const char *rel_path)
 {
 	char *buf = NULL, *cwd, *ret;
 	size_t len = 128, cwd_len, rel_len, ret_len;
+        printf("os_rel2abs_path internal\n");
 
 	if (rel_path[0] == '/')
 		return os_strdup(rel_path);
@@ -179,6 +180,7 @@ char * os_rel2abs_path(const char *rel_path)
 		os_memcpy(ret + cwd_len + 1, rel_path, rel_len);
 		ret[ret_len - 1] = '\0';
 	}
+        printf("ret=%s\n", ret);
 	os_free(buf);
 	return ret;
 }

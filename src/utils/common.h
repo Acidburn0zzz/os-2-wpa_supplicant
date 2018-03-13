@@ -11,13 +11,23 @@
 
 #include "os.h"
 
+#ifndef _SOCKLEN_T_DECLARED
+  #define _SOCKLEN_T_DECLARED
+  #define SOCKLEN_T int
+  typedef int socklen_t;
+#endif /* _SOCKLEN_T_DECLARED */
+
+#if defined(__OS2__)
+	#define VERSION_STR_POSTFIX " (OS/2-v2beta)"
+#endif /* __OS2__ */
+
 #if defined(__linux__) || defined(__GLIBC__)
 #include <endian.h>
 #include <byteswap.h>
 #endif /* __linux__ */
 
 #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || \
-    defined(__OpenBSD__)
+    defined(__OpenBSD__) || defined(__OS2__)
 #include <sys/types.h>
 #include <sys/endian.h>
 #define __BYTE_ORDER	_BYTE_ORDER
@@ -33,7 +43,7 @@
 #define bswap_64 bswap64
 #endif /* __OpenBSD__ */
 #endif /* defined(__FreeBSD__) || defined(__NetBSD__) ||
-	* defined(__DragonFly__) || defined(__OpenBSD__) */
+	* defined(__DragonFly__) || defined(__OpenBSD__) || defined(__OS2__) */
 
 #ifdef __APPLE__
 #include <sys/types.h>
@@ -84,6 +94,18 @@ typedef int socklen_t;
 
 
 /* Define platform specific integer types */
+
+#ifdef __OS2__
+typedef u_int64_t u64;
+typedef u_int32_t u32;
+typedef u_int16_t u16;
+typedef u_int8_t u8;
+typedef int64_t s64;
+typedef int32_t s32;
+typedef int16_t s16;
+typedef int8_t s8;
+#define WPA_TYPES_DEFINED
+#endif /* __OS2__ */
 
 #ifdef _MSC_VER
 typedef UINT64 u64;

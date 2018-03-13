@@ -17,7 +17,7 @@ int close(int fd);
 #ifdef CONFIG_USE_NDISUIO
 #include <winsock2.h>
 #else /* CONFIG_USE_NDISUIO */
-#include <Packet32.h>
+#include "packet32.h"
 #endif /* CONFIG_USE_NDISUIO */
 #ifdef __MINGW32_VERSION
 #include <ddk/ntddndis.h>
@@ -668,6 +668,7 @@ static int wpa_driver_ndis_get_ssid(void *priv, u8 *ssid)
 	res = ndis_get_oid(drv, OID_802_11_SSID, (char *) &buf, sizeof(buf));
 	if (res < 4) {
 		wpa_printf(MSG_DEBUG, "NDIS: Failed to get SSID");
+		printf("NDIS: Failed to get SSID\n\n");
 		if (drv->wired) {
 			wpa_printf(MSG_DEBUG, "NDIS: Allow get_ssid failure "
 				   "with a wired interface");

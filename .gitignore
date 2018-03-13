@@ -6,6 +6,13 @@
 *.gcov
 *.pyc
 *~
+*.exe
+*.dll
+*.map
+*.obj
+*.rsp
+*.log
+*.vtg
 .config
 tests/hwsim/logs
 tests/remote/logs

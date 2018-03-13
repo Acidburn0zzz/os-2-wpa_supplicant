@@ -10,6 +10,7 @@
 #define CONTROL_IFACE_COMMON_H
 
 #include "utils/list.h"
+#include "_sockaddr_storage.h"  // 20180308 AB work around IPv6 on OS/2 //
 
 /* Events enable bits (wpa_ctrl_dst::events) */
 #define WPA_EVENT_RX_PROBE_REQUEST BIT(0)
@@ -34,8 +35,10 @@ void sockaddr_print(int level, const char *msg, struct sockaddr_storage *sock,
 
 int ctrl_iface_attach(struct dl_list *ctrl_dst, struct sockaddr_storage *from,
 		       socklen_t fromlen, const char *input);
+
 int ctrl_iface_detach(struct dl_list *ctrl_dst, struct sockaddr_storage *from,
 		      socklen_t fromlen);
+
 int ctrl_iface_level(struct dl_list *ctrl_dst, struct sockaddr_storage *from,
 		     socklen_t fromlen, const char *level);
 

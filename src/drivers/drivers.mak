@@ -169,6 +169,11 @@ ifdef NEED_NETLINK
 DRV_OBJS += ../src/drivers/netlink.o
 endif
 
+ifdef CONFIG_DRIVER_GENMAC
+DRV_WPA_CFLAGS += -DCONFIG_DRIVER_GENMAC -I../src/drivers
+DRV_WPA_OBJS += ../src/drivers/driver_genmac.o ../src/drivers/packet32.o
+endif
+
 ifdef NEED_LINUX_IOCTL
 DRV_OBJS += ../src/drivers/linux_ioctl.o
 endif

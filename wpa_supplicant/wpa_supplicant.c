@@ -3787,7 +3787,11 @@ static int wpa_supplicant_set_driver(struct wpa_supplicant *wpa_s,
 	if (wpa_s == NULL)
 		return -1;
 
-	if (wpa_drivers[0] == NULL) {
+	for (i = 0; wpa_drivers[i]; i++) {
+    printf("  driver wpa_drivers[i]->name=%s\n", wpa_drivers[i]->name);
+    }
+	
+  if (wpa_drivers[0] == NULL) {
 		wpa_msg(wpa_s, MSG_ERROR, "No driver interfaces build into "
 			"wpa_supplicant");
 		return -1;
@@ -5222,6 +5226,7 @@ static int wpa_supplicant_init_iface(struct wpa_supplicant *wpa_s,
 
 	if (iface->confname) {
 #ifdef CONFIG_BACKEND_FILE
+    printf("wpa_supplicant_init_iface call os_rel2abs_path with iface->confname=%s\n", iface->confname);
 		wpa_s->confname = os_rel2abs_path(iface->confname);
 		if (wpa_s->confname == NULL) {
 			wpa_printf(MSG_ERROR, "Failed to get absolute path "
@@ -5240,6 +5245,7 @@ static int wpa_supplicant_init_iface(struct wpa_supplicant *wpa_s,
 				   "configuration '%s'.", wpa_s->confname);
 			return -1;
 		}
+    printf("wpa_supplicant_init_iface call os_rel2abs_path with iface->confanother=%s\n", iface->confanother);
 		wpa_s->confanother = os_rel2abs_path(iface->confanother);
 		if (wpa_s->confanother &&
 		    !wpa_config_read(wpa_s->confanother, wpa_s->conf)) {
@@ -5960,7 +5966,7 @@ struct wpa_global * wpa_supplicant_init(struct wpa_params *params)
 	if (params == NULL)
 		return NULL;
 
-#ifdef CONFIG_DRIVER_NDIS
+#if defined(CONFIG_DRIVER_NDIS) || defined(CONFIG_DRIVER_GENMAC)  // 20180308 AB added genmac //
 	{
 		void driver_ndis_init_ops(void);
 		driver_ndis_init_ops();

@@ -373,6 +373,7 @@ struct wpa_config * wpa_config_read(const char *name, struct wpa_config *cfgp)
 	struct wpa_config *config;
 	int id = 0;
 	int cred_id = 0;
+        printf("wpa_config_read, name=0x%X\n", name);
 
 	if (name == NULL)
 		return NULL;
@@ -385,6 +386,7 @@ struct wpa_config * wpa_config_read(const char *name, struct wpa_config *cfgp)
 			   "structure");
 		return NULL;
 	}
+        printf(" name=%s\n", name);
 	tail = head = config->ssid;
 	while (tail && tail->next)
 		tail = tail->next;
