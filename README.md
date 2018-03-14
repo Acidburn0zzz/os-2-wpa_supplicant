@@ -11,9 +11,8 @@ OS/2 port of wpa_supplicant from Jouni Malinen. See README.
 
 This is only a temporary repository. Work in progress.
 
-
-
-
+----------------------------------------------
+Below no real information. Place holder only.
 
 
 ### How do I get set up? ###
