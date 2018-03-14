@@ -5,7 +5,7 @@ OS/2 port of wpa_supplicant from Jouni Malinen. See README.
 ### What is this repository for? ###
 
 * Source code for OS/2 port until it makes it into official repository
-* Starting with version 2.7 from 20180310
+* Starting with version 2.7 from http://w1.fi/wpa_supplicant/ at 20180310
 * [official repository](http://w1.fi/wpa_supplicant/)
 * [current OS/2 repository (v2.2)](http://trac.netlabs.org/ports/browser/wpa_supplicant/)
 
