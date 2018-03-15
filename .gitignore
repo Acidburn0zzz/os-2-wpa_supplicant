@@ -13,7 +13,6 @@
 *.rsp
 *.log
 *.vtg
-.config
 tests/hwsim/logs
 tests/remote/logs
 wpaspy/build
