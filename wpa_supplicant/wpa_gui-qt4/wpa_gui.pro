@@ -24,6 +24,11 @@ win32 {
   DEFINES += _X86_
   SOURCES += ../../src/utils/os_win32.c
   RESOURCES += icons_png.qrc
+} else:os2 {
+   DEFINES += CONFIG_CTRL_IFACE_UDP
+   SOURCES += ../../src/utils/os_os2.c
+   DEF_FILE += ../bldlvl.def
+   #LFLAGS += -static-libgcc
 } else {
   DEFINES += CONFIG_CTRL_IFACE_UNIX
   SOURCES += ../../src/utils/os_unix.c

@@ -80,6 +80,7 @@ E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\browser.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\build_config.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\common.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\common.h
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\crc32.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\edit.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\edit.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\edit_readline.c
@@ -96,11 +97,14 @@ E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\http_curl.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\includes.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\ip_addr.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\ip_addr.h
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\json.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\list.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_internal.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_none.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_os2.c
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_unix.c
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_win32.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\pcsc_funcs.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\pcsc_funcs.h
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\platform.h
@@ -262,48 +266,129 @@ E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\wpamsg.h
 [ASSOCIATION]
 [STATE]
-SCREEN: 3840 1200 21 27 1877 1137 0 0 N 0 0 0 0 1588 1052
-CWD: E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant
+SCREEN: 3840 1200 23 26 1877 1137 0 0 N 0 0 0 0 1588 1052
+CWD: E:\_work\ports\wpa_supplicant\trunk\wpa_supplicant\wpa_gui-qt4
 BUFFER: BN="P:\Util\VisualSlickEdit40\os2\vrestore.slk"
 BI: MA=1 254 1  TABS=1 9  WWS=3 IWT=0 ST=0 IN=0 BW=0 US=0 RO=0 SE=0 SN=0 BIN=0 MN=Fundamental	HM=0 MF=1
-VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=23 HT=0 HN=0 HF=0 HC=4
-BUFFER: BN="E:\_work\ports\wpa_supplicant\trunk\wpa_supplicant\.config"
-BI: MA=1 255 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=0
-VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=17 HT=0 HN=0 HF=0 HC=4
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=36 HT=0 HN=0 HF=0 HC=4
 BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\README.OS2"
-BI: MA=1 80 1  TABS=1 3  WWS=3 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=os2	HM=0 MF=768
-VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=4 HT=0 HN=0 HF=0 HC=4
-BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\vs_make.cmd"
-BI: MA=1 74 1  TABS=1 3  WWS=0 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Rexx	HM=0 MF=288
-VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=19 HT=0 HN=0 HF=0 HC=4
-BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\Makefile"
-BI: MA=1 250 1  TABS=1 5  WWS=3 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=mak	HM=0 MF=512
-VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=22 HT=0 HN=0 HF=0 HC=4
+BI: MA=1 80 1  TABS=1 3  WWS=3 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=os2	HM=0 MF=8
+VIEW: LN=.776 CL=57 LE=0 CX=57 CY=13 WI=5 BI=35 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\config_file.c"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=8
+VIEW: LN=.41 CL=39 LE=0 CX=39 CY=0 WI=5 BI=25 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_supplicant.conf"
+BI: MA=1 120 1  TABS=1 5  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=8
+VIEW: LN=.6685 CL=93 LE=0 CX=93 CY=20 WI=5 BI=21 HT=0 HN=0 HF=0 HC=4
 BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\README.md"
-BI: MA=1 120 1  TABS=1 5  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=768
-VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=20 HT=0 HN=0 HF=0 HC=4
-WINDOW: 67 499 1076 286 -1 -1 N  WF=0 WT=3 "System VIO,6,0,1"
+BI: MA=1 120 1  TABS=1 5  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=8
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=34 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\Makefile"
+BI: MA=1 250 1  TABS=1 5  WWS=3 IWT=0 ST=255 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=mak	HM=0 MF=536
+VIEW: LN=.32553 CL=13 LE=0 CX=13 CY=39 WI=5 BI=23 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\wpa_gui.pro"
+BI: MA=1 74 1  TABS=1 4  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=PV-WAVE	HM=0 MF=32
+VIEW: LN=.848 CL=36 LE=0 CX=36 CY=28 WI=5 BI=19 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\trunk\wpa_supplicant\wpa_gui-qt4\wpa_gui.pro"
+BI: MA=1 74 1  TABS=1 4  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=PV-WAVE	HM=0 MF=8
+VIEW: LN=.858 CL=20 LE=0 CX=20 CY=7 WI=5 BI=20 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\.config"
+BI: MA=1 120 1  TABS=1 5  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=8
+VIEW: LN=.794 CL=1 LE=0 CX=1 CY=16 WI=5 BI=33 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\ctrl_iface_unix.c"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=8
+VIEW: LN=.4822 CL=17 LE=0 CX=17 CY=22 WI=5 BI=24 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\wpa_debug.c"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=8
+VIEW: LN=.11724 CL=28 LE=0 CX=28 CY=22 WI=5 BI=26 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\drivers\priv_netlink.h"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=8
+VIEW: LN=.2437 CL=3 LE=0 CX=3 CY=22 WI=5 BI=32 HT=0 HN=0 HF=0 HC=4
 BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\vs_make.cmd"
-VIEW: LN=.0 CL=1 LE=0 CX=7 CY=1 WI=84 BI=19 HT=0 HN=0 HF=0 HC=4
-WINDOW: 936 -2 650 927 -1 -1 N  WF=0 WT=1 "System VIO,6,0,1"
-BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\README.OS2"
-VIEW: LN=.0 CL=1 LE=0 CX=7 CY=1 WI=82 BI=4 HT=0 HN=0 HF=0 HC=4
+BI: MA=1 74 1  TABS=1 3  WWS=0 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Rexx	HM=0 MF=8
+VIEW: LN=.134 CL=7 LE=0 CX=7 CY=5 WI=5 BI=31 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_unix.c"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=8
+VIEW: LN=.1564 CL=17 LE=0 CX=17 CY=23 WI=5 BI=30 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_os2.c"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=8
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=29 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\MAKEFILE.AB"
+BI: MA=1 120 1  TABS=1 5  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=8
+VIEW: LN=.2023 CL=33 LE=0 CX=33 CY=47 WI=5 BI=28 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\m.cmd"
+BI: MA=1 74 1  TABS=1 3  WWS=0 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=Rexx	HM=0 MF=8
+VIEW: LN=.399 CL=1 LE=0 CX=1 CY=18 WI=5 BI=27 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\Makefile"
+BI: MA=1 250 1  TABS=1 5  WWS=3 IWT=0 ST=0 IN=2 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=mak	HM=0 MF=0
+VIEW: LN=.3289 CL=21 LE=0 CX=21 CY=31 WI=5 BI=17 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_supplicant.c"
+BI: MA=1 74 1  TABS=1 3  WWS=1 IWT=1 ST=0 IN=1 BW=0 US=10000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=616
+VIEW: LN=.167606 CL=36 LE=0 CX=36 CY=25 WI=5 BI=22 HT=0 HN=0 HF=0 HC=4
+WINDOW: 333 28 928 834 -1 -1 N  WF=0 WT=16 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\Makefile"
+VIEW: LN=.32553 CL=13 LE=0 CX=19 CY=39 WI=85 BI=23 HT=0 HN=0 HF=0 HC=4
 WINDOW: 847 262 740 787 -1 -1 N  WF=0 WT=2 "System VIO,6,0,1"
 BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\README.md"
-VIEW: LN=.0 CL=1 LE=0 CX=7 CY=1 WI=83 BI=20 HT=0 HN=0 HF=0 HC=4
-WINDOW: 53 -1 928 834 -1 -1 N  WF=0 WT=4 "System VIO,6,0,1"
-BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\Makefile"
-VIEW: LN=.3687 CL=18 LE=0 CX=24 CY=26 WI=86 BI=22 HT=0 HN=0 HF=0 HC=4
+VIEW: LN=.0 CL=1 LE=0 CX=7 CY=1 WI=84 BI=34 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 849 828 -1 -1 N  WF=0 WT=10 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_supplicant.conf"
+VIEW: LN=.6685 CL=93 LE=0 CX=99 CY=20 WI=83 BI=21 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 769 710 -1 -1 N  WF=0 WT=6 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\config_file.c"
+VIEW: LN=.41 CL=39 LE=0 CX=45 CY=0 WI=82 BI=25 HT=0 HN=0 HF=0 HC=4
+WINDOW: 936 -2 650 927 -1 -1 N  WF=0 WT=1 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\README.OS2"
+VIEW: LN=.776 CL=57 LE=0 CX=63 CY=13 WI=81 BI=35 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 951 975 -1 -1 N  WF=0 WT=9 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\Makefile"
+VIEW: LN=.3289 CL=21 LE=0 CX=27 CY=31 WI=97 BI=17 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 1071 710 -1 -1 N  WF=0 WT=13 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\m.cmd"
+VIEW: LN=.399 CL=1 LE=0 CX=7 CY=18 WI=96 BI=27 HT=0 HN=0 HF=0 HC=4
+WINDOW: 488 62 840 882 -1 -1 N  WF=0 WT=14 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\MAKEFILE.AB"
+VIEW: LN=.2023 CL=33 LE=0 CX=39 CY=47 WI=95 BI=28 HT=0 HN=0 HF=0 HC=4
+WINDOW: 560 15 992 979 -1 -1 N  WF=0 WT=12 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_os2.c"
+VIEW: LN=.0 CL=1 LE=0 CX=7 CY=1 WI=94 BI=29 HT=0 HN=0 HF=0 HC=4
+WINDOW: 129 4 961 962 -1 -1 N  WF=0 WT=15 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_unix.c"
+VIEW: LN=.1564 CL=17 LE=0 CX=23 CY=23 WI=93 BI=30 HT=0 HN=0 HF=0 HC=4
+WINDOW: 793 182 673 691 -1 -1 N  WF=0 WT=3 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\vs_make.cmd"
+VIEW: LN=.134 CL=7 LE=0 CX=13 CY=5 WI=92 BI=31 HT=0 HN=0 HF=0 HC=4
+WINDOW: 24 25 1071 710 -1 -1 N  WF=0 WT=7 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\drivers\priv_netlink.h"
+VIEW: LN=.2437 CL=3 LE=0 CX=9 CY=22 WI=91 BI=32 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 1071 710 -1 -1 N  WF=0 WT=8 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\wpa_debug.c"
+VIEW: LN=.11724 CL=28 LE=0 CX=34 CY=22 WI=90 BI=26 HT=0 HN=0 HF=0 HC=4
+WINDOW: 48 50 1071 710 -1 -1 N  WF=0 WT=11 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\ctrl_iface_unix.c"
+VIEW: LN=.4822 CL=17 LE=0 CX=23 CY=22 WI=89 BI=24 HT=0 HN=0 HF=0 HC=4
+WINDOW: 24 25 933 1009 -1 -1 N  WF=0 WT=5 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\.config"
+VIEW: LN=.794 CL=1 LE=0 CX=7 CY=16 WI=88 BI=33 HT=0 HN=0 HF=0 HC=4
+WINDOW: 596 43 928 913 -1 -1 N  WF=0 WT=4 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\trunk\wpa_supplicant\wpa_gui-qt4\wpa_gui.pro"
+VIEW: LN=.858 CL=20 LE=0 CX=20 CY=7 WI=87 BI=20 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 1071 710 -1 -1 N  WF=0 WT=19 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_supplicant.c"
+VIEW: LN=.167606 CL=36 LE=0 CX=42 CY=25 WI=98 BI=22 HT=0 HN=0 HF=0 HC=4
+WINDOW: 110 24 826 988 -1 -1 N  WF=0 WT=17 "System VIO,6,0,1"
+BUFFER: BN="E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\wpa_gui.pro"
+VIEW: LN=.905 CL=16 LE=0 CX=16 CY=30 WI=86 BI=19 HT=0 HN=0 HF=0 HC=4
 FILEHIST: 9
-E:\log\MyIP.log
-P:\UTIL\VISUALSLICKEDIT40\OS2\vrestore.slk
-E:\_work\ports\wpa_supplicant\trunk\wpa_supplicant\.config
-E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\browser-android.c
-E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\ctrl_iface_udp.c
-E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\README.OS2
-E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\README.md
-E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\vs_make.cmd
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\Makefile
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\MAKEFILE.AB
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_unix.c
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\src\utils\os_os2.c
 E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\Makefile
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_gui-qt4\wpa_gui.pro
+E:\_work\ports\wpa_supplicant\trunk\wpa_supplicant\wpa_gui-qt4\wpa_gui.pro
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\README.OS2
+E:\_work\ports\wpa_supplicant\20180302_from_w1.fi\hostap\wpa_supplicant\wpa_supplicant.c
 PRINTER: 2
 PRINTER: 2
 HPPSLase,
