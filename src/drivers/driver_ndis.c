@@ -668,7 +668,6 @@ static int wpa_driver_ndis_get_ssid(void *priv, u8 *ssid)
 	res = ndis_get_oid(drv, OID_802_11_SSID, (char *) &buf, sizeof(buf));
 	if (res < 4) {
 		wpa_printf(MSG_DEBUG, "NDIS: Failed to get SSID");
-		printf("NDIS: Failed to get SSID\n\n");
 		if (drv->wired) {
 			wpa_printf(MSG_DEBUG, "NDIS: Allow get_ssid failure "
 				   "with a wired interface");

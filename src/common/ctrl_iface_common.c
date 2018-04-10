@@ -14,7 +14,7 @@
 #include "utils/common.h"
 #include "ctrl_iface_common.h"
 
- static int sockaddr_compare(struct sockaddr_storage *a, socklen_t a_len,
+static int sockaddr_compare(struct sockaddr_storage *a, socklen_t a_len,
 			    struct sockaddr_storage *b, socklen_t b_len)
 {
 	if (a->ss_family != b->ss_family)

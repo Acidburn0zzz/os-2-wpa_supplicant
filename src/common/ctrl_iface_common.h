@@ -35,10 +35,8 @@ void sockaddr_print(int level, const char *msg, struct sockaddr_storage *sock,
 
 int ctrl_iface_attach(struct dl_list *ctrl_dst, struct sockaddr_storage *from,
 		       socklen_t fromlen, const char *input);
-
 int ctrl_iface_detach(struct dl_list *ctrl_dst, struct sockaddr_storage *from,
 		      socklen_t fromlen);
-
 int ctrl_iface_level(struct dl_list *ctrl_dst, struct sockaddr_storage *from,
 		     socklen_t fromlen, const char *level);
 

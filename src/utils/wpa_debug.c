@@ -538,13 +538,9 @@ int wpa_debug_reopen_file(void)
 
 int wpa_debug_open_file(const char *path)
 {
-        printf("wpa_debug_open_file\n");
-
 #ifdef CONFIG_DEBUG_FILE
-        printf("CONFIG_DEBUG_FILE=yes\n");
 	if (!path)
 		return 0;
-        printf("path=%s\n", path);
 
 	if (last_path == NULL || os_strcmp(last_path, path) != 0) {
 		/* Save our path to enable re-open */
@@ -553,7 +549,6 @@ int wpa_debug_open_file(const char *path)
 	}
 
 	out_file = fopen(path, "a");
-        printf("out_file=0x%X\n", out_file);
 	if (out_file == NULL) {
 		wpa_printf(MSG_ERROR, "wpa_debug_open_file: Failed to open "
 			   "output file, using standard output");

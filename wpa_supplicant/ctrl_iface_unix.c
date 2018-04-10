@@ -133,7 +133,7 @@ static void wpa_supplicant_ctrl_iface_receive(int sock, void *eloop_ctx,
 	struct ctrl_iface_priv *priv = sock_ctx;
 	char buf[4096];
 	int res;
-  struct sockaddr_storage from;
+	struct sockaddr_storage from;
 	socklen_t fromlen = sizeof(from);
 	char *reply = NULL, *reply_buf = NULL;
 	size_t reply_len = 0;
@@ -1048,7 +1048,7 @@ static void wpa_supplicant_global_ctrl_iface_receive(int sock, void *eloop_ctx,
 	struct ctrl_iface_global_priv *priv = sock_ctx;
 	char buf[4096];
 	int res;
-  struct sockaddr_storage from;
+	struct sockaddr_storage from;
 	socklen_t fromlen = sizeof(from);
 	char *reply = NULL, *reply_buf = NULL;
 	size_t reply_len;
