@@ -27,7 +27,7 @@ win32 {
 } else:os2 {
    DEFINES += CONFIG_CTRL_IFACE_UDP
    SOURCES += ../../src/utils/os_os2.c
-   DEF_FILE += ../bldlvl.def
+   DEF_FILE += ..\\..\\wpa_supplicant\\bldlvl.def
    #LFLAGS += -static-libgcc
 } else {
   DEFINES += CONFIG_CTRL_IFACE_UNIX

@@ -368,6 +368,7 @@ int WpaGui::openCtrlConnection(const char *ifname)
 		return -1;
 	snprintf(cfile, flen, "%s", ctrl_iface);
 #endif /* CONFIG_CTRL_IFACE_UNIX */
+	debug("ctrl_iface='%s'", ctrl_iface);
 
 	if (ctrl_conn) {
 		wpa_ctrl_close(ctrl_conn);
@@ -755,6 +756,7 @@ void WpaGui::helpAbout()
 			   "Copyright (c) 2003-2015,\n"
 			   "Jouni Malinen <j@w1.fi>\n"
 			   "and contributors.\n"
+				 "Build by AB, "__DATE__" "__TIME__"\n"
 			   "\n"
 			   "This software may be distributed under\n"
 			   "the terms of the BSD license.\n"
@@ -811,6 +813,7 @@ void WpaGui::ping()
 {
 	char buf[10];
 	size_t len;
+	int rc;
 
 #ifdef CONFIG_CTRL_IFACE_NAMED_PIPE
 	/*
@@ -839,11 +842,12 @@ void WpaGui::ping()
 	}
 
 	len = sizeof(buf) - 1;
-	if (ctrlRequest("PING", buf, &len) < 0) {
-		debug("PING failed - trying to reconnect");
-		if (openCtrlConnection(ctrl_iface) >= 0) {
+	if ( (rc = ctrlRequest("PING", buf, &len)) < 0) {
+		debug("PING failed (rc=%d) - trying to reconnect", rc);
+		if ( (rc = openCtrlConnection(ctrl_iface)) >= 0) {
 			debug("Reconnected successfully");
 			pingsToStatusUpdate = 0;
+			debug("rc=%d", rc);
 		}
 	}
 
@@ -1360,6 +1364,12 @@ void WpaGui::createTrayIcon(bool trayOnly)
 	QApplication::setQuitOnLastWindowClosed(false);
 
 	tray_icon = new QSystemTrayIcon(this);
+	tray_icon->setToolTip(qAppName() + tr(" - wpa_supplicant user interface"));
+	if (QImageReader::supportedImageFormats().contains(QByteArray("svg")))
+		tray_icon->setIcon(QIcon(":/icons/wpa_gui.svg"));
+	else
+		tray_icon->setIcon(QIcon(":/icons/wpa_gui.png"));
+
 	updateTrayIcon(TrayIconOffline);
 
 	connect(tray_icon,

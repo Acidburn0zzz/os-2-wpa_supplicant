@@ -2,6 +2,7 @@
  * wpa_supplicant/hostapd / OS specific functions for OS/2, ArcaOS and
  * eComStation * systems
  * Copyright (c) 2005, Jouni Malinen <jkmaline@cc.hut.fi>
+ * 							 2018, Andreas Buchinger
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
