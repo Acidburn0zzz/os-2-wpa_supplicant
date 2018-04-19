@@ -1,5 +1,6 @@
 @REM "P:\usr\lib\qt4\bin\lrelease.exe"
 @REM add to path
+call envqt.cmd
 
 @REM make -d for debug output
 @REM m config <-- better not doing that

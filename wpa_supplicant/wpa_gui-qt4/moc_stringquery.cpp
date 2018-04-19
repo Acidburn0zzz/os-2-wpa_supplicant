@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'stringquery.h'
 **
-** Created: Fri Mar 9 15:57:28 2018
+** Created: Sat Apr 14 17:17:48 2018
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!
